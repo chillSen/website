@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    color: #234;
+}
+
+header {
+    background: linear-gradient(90deg, #0288d1 60%, #26c6da 100%);
+    color: #fff;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(2,136,209,0.1);
+}
+
+header::after {
+    content: '';
+    display: block;
+    height: 30px;
+    background: url('data:image/svg+xml;utf8,<svg width="100%" height="30" xmlns="http://www.w3.org/2000/svg"><path d="M0,20 Q50,40 100,20 T200,20 T300,20 T400,20 T500,20 V30 H0 Z" fill="%23b2ebf2"/></svg>') repeat-x;
+    background-size: cover;
+    margin-top: 1rem;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+main {
+    max-width: 700px;
+    margin: 2rem auto;
+    background: rgba(255,255,255,0.85);
+    border-radius: 16px;
+    box-shadow: 0 6px 24px rgba(2,136,209,0.08);
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+ul {
+    padding-left: 1.2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background: linear-gradient(90deg, #0288d1 60%, #26c6da 100%);
+    color: #fff;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 -2px 12px rgba(2,136,209,0.07);
+}
+
+/* Maritime Icons */
+section h2::before {
+    content: '\1F30A'; /* Wellen-Emoji */
+    margin-right: 0.5em;
+}
+
+/* Button Style für Fotos & Erinnerungen */
+section:last-of-type p::after {
+    content: ' 📸';
+}
+
+@media (max-width: 800px) {
+    main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
