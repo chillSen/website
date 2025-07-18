@@ -222,6 +222,17 @@ li {
     line-height: 1.5;
 }
 
+/* Route Info */
+.route-info {
+    background: var(--greek-white);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border-left: 3px solid var(--greek-accent);
+    color: var(--greek-blue);
+    font-style: italic;
+}
+
 /* Footer */
 footer {
     background: var(--greek-blue);
