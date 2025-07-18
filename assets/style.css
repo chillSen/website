@@ -239,6 +239,86 @@ footer p {
     font-style: italic;
 }
 
+/* Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.info-box {
+    background: var(--greek-white);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,88,171,0.1);
+    border-left: 3px solid var(--greek-accent);
+}
+
+.info-box h3 {
+    color: var(--greek-blue);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--greek-accent);
+}
+
+.info-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.info-box ul li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.info-box ul li::before {
+    content: "⚓";
+    position: absolute;
+    left: 0;
+    color: var(--greek-blue);
+}
+
+/* Food Tips */
+.food-tips {
+    background: var(--greek-white);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    box-shadow: 0 2px 12px rgba(0,88,171,0.1);
+}
+
+.food-tips ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.food-tips li {
+    margin-bottom: 1.2rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.food-tips li::before {
+    content: "🍽️";
+    position: absolute;
+    left: 0;
+}
+
+.food-tips li strong {
+    color: var(--greek-blue);
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
 @media (max-width: 800px) {
     main {
         margin: 1rem;
