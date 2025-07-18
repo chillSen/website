@@ -233,6 +233,86 @@ li {
     font-style: italic;
 }
 
+/* Knoten-Grid */
+.knots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.knot {
+    background: var(--greek-white);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.knot img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.knot h3 {
+    color: var(--greek-blue);
+    margin-bottom: 0.5rem;
+}
+
+.knot-steps {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.knot-steps h4 {
+    color: var(--greek-blue);
+    margin-bottom: 0.5rem;
+}
+
+.knot-steps ol {
+    padding-left: 1.2rem;
+}
+
+.knot-steps li {
+    margin-bottom: 0.5rem;
+}
+
+.tips-box {
+    background: var(--greek-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    border-left: 4px solid var(--greek-accent);
+}
+
+.tips-box h4 {
+    color: var(--greek-blue);
+    margin-bottom: 1rem;
+}
+
+.tips-box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.tips-box li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.tips-box li::before {
+    content: "•";
+    color: var(--greek-accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
 /* Footer */
 footer {
     background: var(--greek-blue);
