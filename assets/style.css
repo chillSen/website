@@ -56,81 +56,204 @@
     font-size: 0.98rem;
     color: #234;
 }
+/* Griechisch-maritimes Design */
+:root {
+    --greek-blue: #0058ab;
+    --greek-light-blue: #82b8e4;
+    --greek-white: #ffffff;
+    --greek-sand: #f5e6ca;
+    --greek-accent: #d4af37;
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', 'Arial', sans-serif;
-    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    background: var(--greek-sand);
     color: #234;
+    background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="20" fill="none" stroke="%230058ab" stroke-width="0.5" opacity="0.1"/></svg>');
 }
 
 header {
-    background: linear-gradient(90deg, #0288d1 60%, #26c6da 100%);
-    color: #fff;
-    padding: 2rem 0 1rem 0;
+    background: linear-gradient(135deg, var(--greek-blue) 0%, var(--greek-light-blue) 100%);
+    color: var(--greek-white);
+    padding: 3rem 0 2rem 0;
     text-align: center;
     position: relative;
-    box-shadow: 0 4px 12px rgba(2,136,209,0.1);
+    box-shadow: 0 4px 12px rgba(0,88,171,0.2);
+    border-bottom: 3px solid var(--greek-accent);
 }
 
 header::after {
     content: '';
     display: block;
-    height: 30px;
-    background: url('data:image/svg+xml;utf8,<svg width="100%" height="30" xmlns="http://www.w3.org/2000/svg"><path d="M0,20 Q50,40 100,20 T200,20 T300,20 T400,20 T500,20 V30 H0 Z" fill="%23b2ebf2"/></svg>') repeat-x;
-    background-size: cover;
+    height: 40px;
+    background: url('data:image/svg+xml;utf8,<svg width="100" height="40" xmlns="http://www.w3.org/2000/svg"><path d="M0,20 Q25,40 50,20 T100,20" fill="none" stroke="%23ffffff" stroke-width="2"/></svg>') repeat-x;
+    background-size: 100px 40px;
     margin-top: 1rem;
+    opacity: 0.6;
 }
 
-h1, h2 {
-    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
-    letter-spacing: 1px;
+h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    margin: 0;
+}
+
+h2 {
+    font-family: 'Georgia', serif;
+    color: var(--greek-blue);
+    border-bottom: 2px solid var(--greek-accent);
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
 }
 
 main {
-    max-width: 700px;
+    max-width: 1000px;
     margin: 2rem auto;
-    background: rgba(255,255,255,0.85);
-    border-radius: 16px;
-    box-shadow: 0 6px 24px rgba(2,136,209,0.08);
-    padding: 2rem;
+    padding: 0 2rem;
+    background: transparent;
+    box-shadow: none;
 }
 
-section {
-    margin-bottom: 2rem;
+/* Crew-Liste */
+.crew-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    justify-content: center;
 }
 
-ul {
+.crew-list li {
+    background: var(--greek-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,88,171,0.1);
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    color: var(--greek-blue);
+    border: 1px solid var(--greek-light-blue);
+    transition: transform 0.2s;
+}
+
+.crew-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,88,171,0.15);
+}
+
+/* Buchten Grid */
+.buchten-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.bucht {
+    background: var(--greek-white);
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0,88,171,0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.bucht:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 24px rgba(0,88,171,0.2);
+}
+
+.bucht img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--greek-accent);
+}
+
+.bucht h3 {
+    margin: 1rem;
+    color: var(--greek-blue);
+    font-family: 'Georgia', serif;
+}
+
+.bucht p {
+    margin: 1rem;
+    line-height: 1.6;
+}
+
+.tipps {
+    background: rgba(0,88,171,0.05);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 3px solid var(--greek-accent);
+}
+
+.tipps strong {
+    color: var(--greek-blue);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.tipps ul {
+    background: transparent;
+    box-shadow: none;
+    margin: 0;
     padding-left: 1.2rem;
 }
 
+.tipps li {
+    margin-bottom: 0.3rem;
+    color: #456;
+    font-size: 0.95rem;
+}
+
+/* Listen */
+ul, ol {
+    background: var(--greek-white);
+    border-radius: 12px;
+    padding: 1.5rem 2rem 1.5rem 3.5rem;
+    box-shadow: 0 2px 10px rgba(0,88,171,0.08);
+}
+
 li {
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
 }
 
+/* Footer */
 footer {
+    background: var(--greek-blue);
+    color: var(--greek-white);
     text-align: center;
-    padding: 1.5rem 0;
-    background: linear-gradient(90deg, #0288d1 60%, #26c6da 100%);
-    color: #fff;
-    border-radius: 0 0 16px 16px;
-    box-shadow: 0 -2px 12px rgba(2,136,209,0.07);
+    padding: 2rem;
+    margin-top: 4rem;
+    border-top: 3px solid var(--greek-accent);
+    border-radius: 0;
 }
 
-/* Maritime Icons */
-section h2::before {
-    content: '\1F30A'; /* Wellen-Emoji */
-    margin-right: 0.5em;
-}
-
-/* Button Style für Fotos & Erinnerungen */
-section:last-of-type p::after {
-    content: ' 📸';
+footer p {
+    margin: 0;
+    font-size: 1.1rem;
+    font-style: italic;
 }
 
 @media (max-width: 800px) {
     main {
         margin: 1rem;
-        padding: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .buchten-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    header {
+        padding: 2rem 0 1rem 0;
+    }
+    
+    h1 {
+        font-size: 2rem;
     }
 }
